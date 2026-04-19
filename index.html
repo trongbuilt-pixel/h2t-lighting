@@ -125,13 +125,13 @@ const CONTENT = {
   // ── TOOLS ──────────────────────────────────────────────────────────────────
   // logo: path to logo image (replace abbr when logos are ready)
   tools: [
-    { abbr: "MA3",  name: "grandMA3",      type: "Console",    logo: "logos/ma3.png"    },
+    { abbr: "MA3",  name: "GrandMA3",      type: "Console",    logo: "logos/ma3.png"    },
     { abbr: "VW",   name: "Vectorworks",   type: "Design",     logo: "logos/Vectorworks.png"     },
     { abbr: "CAP",  name: "Capture",       type: "Previz",     logo: "logos/capture.png" },
-    { abbr: "DEP",  name: "Depence",       type: "Previz",     logo: "logos/dep.png"    },
-    { abbr: "RES",  name: "Resolume",      type: "Media Server", logo: "logos/resolume.png" },
+    { abbr: "DEP",  name: "Depence R4",       type: "Previz",     logo: "logos/dep.png"    },
+    { abbr: "RES",  name: "Resolume Arena",      type: "Media Server", logo: "logos/resolume.png" },
     { abbr: "MAD",  name: "Madrix",        type: "Console",    logo: "logos/madrix.png"  },
-    { abbr: "+",    name: "And more",      type: "Update",     logo: "logos/plus.png"   },
+    { abbr: "+",    name: "And more...",      type: "",     logo: "logos/plus.png"   },
   ],
 
   // ── ABOUT US ─────────────────────────────────────────────────────────────────
@@ -635,7 +635,7 @@ document.body.insertAdjacentHTML('beforeend', `
           <div class="tool-logo tool-logo-large"><img src="${e(t.logo)}" alt="${e(t.name)}"></div>
           <div class="tool-meta">
             <span class="tool-name">${e(t.name)}</span>
-            <span class="tool-type">${e(t.type)}</span>
+            ${t.type ? `<span class="tool-type">${e(t.type)}</span>` : ''}
           </div>
         </div>`).join('')}
     </div>
