@@ -286,7 +286,7 @@ window.H2T_CONTENT = {
       toolsChip: "Công cụ",
       toolsTitleLine1: "Bộ công cụ",
       toolsTitleAccent: "chuyên nghiệp",
-      toolsDesc: "H2T sử dụng phần mềm và thiết bị theo chuẩn ngành. Tất cả công cụ đều có bản quyền đầy đủ và được chọn lựa triển khai kỹ cho từng giai đoạn sản xuất.",
+      toolsDesc: "H2T sử dụng phần mềm và thiết bị theo tiêu chuẩn ngành công nghiệp giải trí. Tất cả công cụ đều có bản quyền, và được chọn lựa kỹ càng cho từng giai đoạn sản xuất.",
       aboutChip: "Giới thiệu",
       teamHeading: "Đội ngũ",
       whyChip: "Vì sao H2T?",
