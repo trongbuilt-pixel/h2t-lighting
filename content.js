@@ -79,6 +79,13 @@ window.H2T_CONTENT = {
         { title: "Government Festival", meta: "Government event", image: "portfolio/government-festival.jpg", imageAlt: "Government Festival portfolio image" },
       ],
     },
+    banner: {
+      chip: "Showcase",
+      title: "Panoramic lighting moments for large-scale stages.",
+      desc: "A wide-format visual block for hero imagery, key show frames, or campaign highlights.",
+        image: "banners/panorama-stage-main.jpg",
+      imageAlt: "Wide stage lighting banner image",
+    },
     tools: [
       { abbr: "MA3", name: "GrandMA3", type: "Console", logo: "logos/ma3.png" },
       { abbr: "VW", name: "Vectorworks", type: "Design", logo: "logos/Vectorworks.png" },
@@ -229,6 +236,13 @@ window.H2T_CONTENT = {
         { title: "Lễ hội âm nhạc", meta: "Festival production", image: "portfolio/music-festival.jpg", imageAlt: "Hình dự án music festival" },
         { title: "Lễ hội Nhà Nước", meta: "Sự kiện nhà nước", image: "portfolio/government-festival.jpg", imageAlt: "Hình dự án government festival" },
       ],
+    },
+    banner: {
+      chip: "Banner nổi bật",
+      title: "Một khung hình siêu rộng cho những sân khấu cần hiệu ứng thị giác mạnh.",
+      desc: "Phù hợp để chèn ảnh panorama, ảnh sân khấu toàn cảnh hoặc frame nổi bật của dự án lớn.",
+        image: "banners/panorama-stage-main.jpg",
+      imageAlt: "Hình banner sân khấu toàn cảnh",
     },
     tools: [
       { abbr: "MA3", name: "GrandMA3", type: "Console", logo: "logos/ma3.png" },
