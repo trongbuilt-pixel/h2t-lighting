@@ -244,7 +244,7 @@ window.H2T_CONTENT = {
       titleLine1: "Đam mê với ánh sáng,",
       titleGreen: "vận hành",
       titleLine3: "chuyên nghiệp.",
-      body: "H2T Lighting Service được tạo nên bởi những con người có hơn 18 năm trong nghề, được trui rèn qua hàng trăm live show, chứ không phải lý thuyết khô khan. Chúng tôi hiểu áp lực của sân khấu, yêu cầu của production và kỳ vọng của khán giả.",
+      body: "H2T Lighting Service được tạo nên bởi những con người với hơn 18 năm kinh nghiệm trong nghề, được trui rèn qua hàng trăm live show, chứ không phải lý thuyết khô khan. Chúng tôi hiểu áp lực của sân khấu, yêu cầu của production và kỳ vọng của khán giả.",
       values: [
         { icon: "✦", title: "Trình độ vững vàng", desc: "Chúng tôi đầu tư sâu vào công nghệ, từ previsualization chính xác, đến quy trình vận hành thực tế ổn định." },
         { icon: "◈", title: "Đồng hành sáng tạo", desc: "Ánh sáng tốt đến từ sự thấu hiểu chung. Chúng tôi lắng nghe, phát triển ý tưởng và làm việc sát với đạo diễn cùng các nhà sản xuất." },
