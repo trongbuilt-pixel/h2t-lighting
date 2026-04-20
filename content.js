@@ -74,9 +74,9 @@ window.H2T_CONTENT = {
       items: [
         { title: "Concert Stage", meta: "Live show", image: "portfolio/concert-stage.jpg", imageAlt: "Concert Stage portfolio image" },
         { title: "Brand Launch", meta: "Corporate event", image: "portfolio/brand-launch.jpg", imageAlt: "Brand Launch portfolio image" },
-        { title: "Tour Visuals", meta: "Touring production", image: "portfolio/tour-visuals.jpg", imageAlt: "Tour Visuals portfolio image" },
-        { title: "Music Festival", meta: "Festival production", image: "portfolio/music-festival.jpg", imageAlt: "Music Festival portfolio image" },
-        { title: "Government Festival", meta: "Government event", image: "portfolio/government-festival.jpg", imageAlt: "Government Festival portfolio image" },
+        { title: "Vin8Wonders", meta: "Touring production", image: "portfolio/tour-visuals.jpg", imageAlt: "Vin8Wonders portfolio image" },
+        { title: "Forrestival 2025", meta: "Festival production", image: "portfolio/music-festival.jpg", imageAlt: "Forrestival 2025 portfolio image" },
+        { title: "VTVConcert", meta: "Government event", image: "portfolio/government-festival.jpg", imageAlt: "VTVConcert portfolio image" },
       ],
     },
     banner: {
@@ -160,7 +160,7 @@ window.H2T_CONTENT = {
   vi: {
     brand: {
       name: "H2T",
-      service: "Dịch vụ ánh sáng toàn diện cho ngành biểu diễn",
+      service: "Dịch vụ ánh sáng toàn diện cho ngành giải trí.",
       title: "H2T Lighting Service",
       badge: "Sẵn sàng cho dự án mới",
       logo: "logos/h2t-main-logo.png",
@@ -230,11 +230,11 @@ window.H2T_CONTENT = {
       titleAccent: "Portfolio",
       desc: "Tổng quan nhanh về các show do H2T đảm nhận.",
       items: [
-        { title: "Sân khấu concert", meta: "Live show", image: "portfolio/concert-stage.jpg", imageAlt: "Hình dự án sân khấu concert" },
+        { title: "Show Của Đen", meta: "Live show", image: "portfolio/concert-stage.jpg", imageAlt: "Hình dự án sân khấu concert" },
         { title: "Sự kiện nhãn hàng", meta: "Sự kiện doanh nghiệp", image: "portfolio/brand-launch.jpg", imageAlt: "Hình dự án ra mắt thương hiệu" },
-        { title: "Tour visuals", meta: "Touring production", image: "portfolio/tour-visuals.jpg", imageAlt: "Hình dự án touring production" },
-        { title: "Lễ hội âm nhạc", meta: "Festival production", image: "portfolio/music-festival.jpg", imageAlt: "Hình dự án music festival" },
-        { title: "Lễ hội Nhà Nước", meta: "Sự kiện nhà nước", image: "portfolio/government-festival.jpg", imageAlt: "Hình dự án government festival" },
+        { title: "Vin8Wonders", meta: "Touring production", image: "portfolio/tour-visuals.jpg", imageAlt: "Hình dự án Vin8Wonders" },
+        { title: "Lễ hội âm nhạc Tràng An Ninh Bình", meta: "Festival production", image: "portfolio/music-festival.jpg", imageAlt: "Hình dự án " },
+        { title: "VTVConcert", meta: "Sự kiện nhà nước", image: "portfolio/government-festival.jpg", imageAlt: "Hình dự án government festival" },
       ],
     },
     banner: {
@@ -273,9 +273,9 @@ window.H2T_CONTENT = {
     why: [
       { title: "Dịch vụ toàn diện, một đội ngũ", desc: "Từ bản vẽ đầu tiên đến đêm cuối cùng của tour, một đội ngũ đồng hành xuyên suốt, không chia tách khâu thực hiện." },
       { title: "Lường trước các rủi ro", desc: "Mỗi show đều được preview trong môi trường 3D. Vấn đề được nhìn ra trước khi thi công thực tế." },
-      { title: "Kinh nghiệm thực chiến", desc: "Hàng trăm show, từ concert đến sự kiện doanh nghiệp. Chúng tôi biết điều gì có thể xảy ra và luôn chuẩn bị trước cho nó." },
-      { title: "Giao tiếp rõ ràng", desc: "Timeline minh bạch, cập nhật đều đặn. Bạn luôn biết show đang ở giai đoạn nào." },
-      { title: "Đầu tư dài hạn", desc: "Chúng tôi liên tục nâng cấp kỹ năng và công nghệ. Bạn luôn làm việc với một đội ngũ đang tiến về phía trước." },
+      { title: "Kinh nghiệm thực chiến", desc: "Hàng trăm show, từ concert đến sự kiện doanh nghiệp. Chúng tôi cố gắng lường trước điều gì có thể xảy ra để có phương án xử lý." },
+      { title: "Giao tiếp rõ ràng", desc: "Timeline minh bạch, cập nhật đều đặn. Bạn luôn biết công việc giao cho chúng tôi đang ở giai đoạn nào." },
+      { title: "Đầu tư dài hạn", desc: "Chúng tôi không ngừng cập nhật kiến thức và nâng cấp kỹ năng. Bạn sẽ làm việc với một đội ngũ luôn tiến về phía trước." },
     ],
     contact: {
       titleLine1: "Cùng nhau tạo nên",
@@ -294,13 +294,13 @@ window.H2T_CONTENT = {
       servicesChip: "Dịch vụ",
       servicesTitleLine1: "Từ concept",
       servicesTitleLine3: "đến sân khấu live",
-      servicesTitleAccent: "sân khấu live",
+        servicesTitleAccent: "sân khấu live",
       servicesDesc: "Chúng tôi đồng hành xuyên suốt quá trình sản xuất của một chương trình: thiết kế, lập trình, preview và vận hành. Một đội ngũ, trọn quy trình.",
       portfolioChip: "Dự án",
       toolsChip: "Công cụ",
       toolsTitleLine1: "Bộ công cụ",
       toolsTitleAccent: "chuyên nghiệp",
-      toolsDesc: "H2T sử dụng phần mềm và thiết bị theo tiêu chuẩn ngành công nghiệp giải trí. Tất cả công cụ đều có bản quyền, và được chọn lựa kỹ càng cho từng giai đoạn sản xuất.",
+      toolsDesc: "H2T sử dụng phần mềm và thiết bị theo tiêu chuẩn của ngành công nghiệp giải trí. Tất cả công cụ đều có bản quyền, và được chọn lựa kỹ càng cho từng giai đoạn sản xuất.",
       aboutChip: "Giới thiệu",
       teamHeading: "Đội ngũ",
       whyChip: "Vì sao H2T?",
