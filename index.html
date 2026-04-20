@@ -163,9 +163,9 @@ section{position:relative;z-index:1;}
 .tools-header{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end;margin-bottom:3.5rem;}
 .tools-inline-list{display:flex;gap:2.5rem;align-items:center;justify-content:flex-start;flex-wrap:wrap;margin-bottom:1.5rem;}
 .tool-inline{display:flex;flex-direction:column;align-items:center;gap:.7rem;min-width:90px;}
-.tool-logo{width:44px;height:44px;min-width:44px;border-radius:12px;background:var(--bg3);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;transition:border-color .2s;}
+.tool-logo{width:44px;height:44px;min-width:44px;border-radius:12px;background:var(--bg3);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden;transition:border-color .2s;}
 .tool-logo-large{width:100px;height:100px;min-width:100px;}
-.tool-logo img{width:90%;height:90%;object-fit:contain;}
+.tool-logo img{width:100%;height:100%;object-fit:cover;transform:scale(var(--tool-logo-scale,1.2));transform-origin:center;}
 .tool-meta{display:flex;flex-direction:column;align-items:center;gap:.1rem;}
 .tool-name{font-size:17px;font-weight:700;color:var(--text);margin-top:.2rem;}
 .tool-type{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text2);}
@@ -312,6 +312,7 @@ const svcSVG = [
   `<svg viewBox="0 0 24 24"><path d="M4 19.5V5a2 2 0 0 1 2-2h8l6 6v10.5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 3v6h6"/><path d="M8 13h8"/><path d="M8 17h5"/></svg>`,
 ];
 const heroIcons = ['✦','◈','⬡','▶','◎'];
+const getToolLogoScale = toolName => toolName === 'GrandMA3' ? 1.4 : toolName === 'Capture' ? 1 : toolName === 'Depence R4' ? 1.1 : 1.2;
 const renderImageSlot = (image, alt, placeholderClass, placeholderLabelClass, placeholderLabel, placeholderNoteClass, placeholderNote) => image
   ? `<img src="${e(image)}" alt="${e(alt)}" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="${placeholderClass}" hidden><span class="${placeholderLabelClass}">${e(placeholderLabel)}</span><p class="${placeholderNoteClass}">${e(placeholderNote)}</p></div>`
   : `<div class="${placeholderClass}"><span class="${placeholderLabelClass}">${e(placeholderLabel)}</span><p class="${placeholderNoteClass}">${e(placeholderNote)}</p></div>`;
@@ -533,7 +534,7 @@ function renderPage(locale) {
     <div class="tools-inline-list">
       ${C.tools.map(t=>`
         <div class="tool-inline">
-          <div class="tool-logo tool-logo-large"><img src="${e(t.logo)}" alt="${e(t.name)}"></div>
+          <div class="tool-logo tool-logo-large" style="--tool-logo-scale:${getToolLogoScale(t.name)}"><img src="${e(t.logo)}" alt="${e(t.name)}"></div>
           <div class="tool-meta">
             <span class="tool-name">${e(t.name)}</span>
             ${t.type ? `<span class="tool-type">${e(t.type)}</span>` : ''}
