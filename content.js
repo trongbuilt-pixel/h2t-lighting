@@ -264,10 +264,10 @@ window.H2T_CONTENT = {
         { icon: "▶", title: "Tin cậy trên sân khấu", desc: "Khi đèn sáng lên, không có chỗ cho sai sót. H2T đảm bảo mọi show đều sẵn sàng trước giờ G." },
       ],
       team: [
-        { photo: "photos/founder.jpg", name: "Trong Bui", role: "Founder", subrole: "Certified MA Lighting Trainer (grandMA3)" },
-        { photo: "photos/account.jpg", name: "Hoang Nguyen", role: "Account" },
-        { photo: "photos/programmer.jpg", name: "Huong Vu", role: "Lighting Programmer" },
-        { photo: "photos/previz.jpg", name: "Tinh Vo", role: "Previz Specialist" },
+        { photo: "photos/founder.jpg", name: "Trong Bui", role: "Founder & Creative Director", subrole: "Certified MA Lighting Trainer (grandMA3)" },
+        { photo: "photos/account.jpg", name: "Hoang Nguyen", role: "CEO" },
+        { photo: "photos/programmer.jpg", name: "Huong Vu", role: "Lighting Designer/ Programmer" },
+        { photo: "photos/previz.jpg", name: "Tinh Vo", role: "Previz Specialist/ Programmer" },
       ],
     },
     why: [
