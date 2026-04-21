@@ -178,7 +178,8 @@ section{position:relative;z-index:1;}
 .val{display:grid;grid-template-columns:2rem 1fr;gap:1.2rem;align-items:start;padding:1.2rem 1.5rem;background:var(--bg2);border-bottom:1px solid var(--border);transition:background .2s;}
 .val:last-child{border-bottom:none;}
 .val:hover{background:var(--bg3);}
-.val-icon{color:var(--g);font-size:1rem;line-height:1.9;}
+.val-icon{color:var(--g);font-size:1rem;line-height:1.9;display:flex;align-items:center;justify-content:center;width:1.4rem;height:1.4rem;}
+.val-icon svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
 .val-title{font-weight:700;font-size:16px;color:var(--text);margin-bottom:2px;}
 .val-desc{font-size:14px;color:var(--text2);line-height:1.7;font-weight:300;}
 .about-box{background:var(--bg2);border:1px solid var(--border);padding:2.5rem;position:relative;overflow:hidden;margin-bottom:2rem;border-radius:var(--radius-lg);}
@@ -312,10 +313,16 @@ const svcSVG = [
   `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>`,
   `<svg viewBox="0 0 24 24"><path d="M4 19.5V5a2 2 0 0 1 2-2h8l6 6v10.5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 3v6h6"/><path d="M8 13h8"/><path d="M8 17h5"/></svg>`,
 ];
+const valueIconSVG = {
+  '✦': `<svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/></svg>`,
+  '◈': `<svg viewBox="0 0 24 24"><path d="M12 4l8 8-8 8-8-8 8-8z"/><path d="M12 8l4 4-4 4-4-4 4-4z"/></svg>`,
+  '▶': `<svg viewBox="0 0 24 24"><path d="M12 4l7 4v8l-7 4-7-4V8l7-4z"/><path d="M10 9.5l5 2.5-5 2.5v-5z"/></svg>`,
+};
 const getToolLogoScale = toolName => toolName === 'GrandMA3' ? 1.4 : toolName === 'Capture' ? 1 : toolName === 'Depence R4' ? 1.1 : 1.2;
 const renderImageSlot = (image, alt, placeholderClass, placeholderLabelClass, placeholderLabel, placeholderNoteClass, placeholderNote) => image
   ? `<img src="${e(image)}" alt="${e(alt)}" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="${placeholderClass}" hidden><span class="${placeholderLabelClass}">${e(placeholderLabel)}</span><p class="${placeholderNoteClass}">${e(placeholderNote)}</p></div>`
   : `<div class="${placeholderClass}"><span class="${placeholderLabelClass}">${e(placeholderLabel)}</span><p class="${placeholderNoteClass}">${e(placeholderNote)}</p></div>`;
+const renderValueIcon = icon => valueIconSVG[icon] || e(icon);
 
 const app = document.getElementById('app');
 
@@ -555,7 +562,7 @@ function renderPage(locale) {
         <div class="values">
           ${C.about.values.map(v=>`
             <div class="val">
-              <span class="val-icon">${e(v.icon)}</span>
+              <span class="val-icon">${renderValueIcon(v.icon)}</span>
               <div>
                 <p class="val-title">${e(v.title)}</p>
                 <p class="val-desc">${e(v.desc)}</p>
