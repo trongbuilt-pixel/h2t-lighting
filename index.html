@@ -94,7 +94,8 @@ body.nav-open{overflow:hidden;}
 .hcard{background:var(--bg2);padding:1.35rem 1.5rem;position:relative;overflow:hidden;transition:background .2s;display:grid;grid-template-columns:56px 56px minmax(0,1fr);gap:1rem;align-items:center;}
 .hcard:hover{background:var(--bg3);}
 .hcard-num{font-size:16px;color:var(--text3);letter-spacing:.1em;font-weight:700;margin:0;align-self:start;padding-top:.15rem;}
-.hcard-icon{font-size:2rem;margin:0;line-height:1;display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:var(--radius-sm);background:var(--gdim);border:1px solid var(--gborder);}
+.hcard-icon{margin:0;line-height:1;display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:var(--radius-sm);background:var(--gdim);border:1px solid var(--gborder);}
+.hcard-icon svg{width:22px;height:22px;stroke:var(--g);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
 .hcard-copy{min-width:0;}
 .hcard-name{font-weight:700;font-size:1.3rem;color:var(--text);margin:0 0 .25rem;}
 .hcard-desc{font-size:16px;color:var(--text2);line-height:1.6;font-weight:300;margin:0;overflow:visible;}
@@ -311,7 +312,6 @@ const svcSVG = [
   `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>`,
   `<svg viewBox="0 0 24 24"><path d="M4 19.5V5a2 2 0 0 1 2-2h8l6 6v10.5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 3v6h6"/><path d="M8 13h8"/><path d="M8 17h5"/></svg>`,
 ];
-const heroIcons = ['✦','◈','⬡','▶','◎'];
 const getToolLogoScale = toolName => toolName === 'GrandMA3' ? 1.4 : toolName === 'Capture' ? 1 : toolName === 'Depence R4' ? 1.1 : 1.2;
 const renderImageSlot = (image, alt, placeholderClass, placeholderLabelClass, placeholderLabel, placeholderNoteClass, placeholderNote) => image
   ? `<img src="${e(image)}" alt="${e(alt)}" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="${placeholderClass}" hidden><span class="${placeholderLabelClass}">${e(placeholderLabel)}</span><p class="${placeholderNoteClass}">${e(placeholderNote)}</p></div>`
@@ -446,7 +446,7 @@ function renderPage(locale) {
       ${C.services.map((s,i)=>`
         <div class="hcard">
           <p class="hcard-num">0${i+1}</p>
-          <div class="hcard-icon">${heroIcons[i]}</div>
+          <div class="hcard-icon">${svcSVG[i] || svcSVG[0]}</div>
           <div class="hcard-copy">
             <p class="hcard-name">${e(s.name)}</p>
             <p class="hcard-desc">${e(s.desc)}</p>
