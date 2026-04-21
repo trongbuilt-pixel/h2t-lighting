@@ -106,10 +106,10 @@ window.H2T_CONTENT = {
         { icon: "▶", title: "Reliability on Stage", desc: "When the lights go on, there is no room for error. H2T ensures full readiness before every show." },
       ],
       team: [
-        { photo: "photos/founder.jpg", name: "Trong Bui", role: "Founder", subrole: "Certified MA Lighting Trainer (grandMA3)" },
+        { photo: "photos/founder.jpg", name: "Trong Bui", role: "Founder & Creative Director", subrole: "Certified MA Lighting Trainer (grandMA3)" },
         { photo: "photos/account.jpg", name: "Hoang Nguyen", role: "Account" },
-        { photo: "photos/programmer.jpg", name: "Huong Vu", role: "Lighting Programmer" },
-        { photo: "photos/previz.jpg", name: "Tinh Vo", role: "Previz Specialist" },
+        { photo: "photos/programmer.jpg", name: "Huong Vu", role: "Lighting Designer/ Programmer" },
+        { photo: "photos/previz.jpg", name: "Tinh Vo", role: "Previz Specialist/ Programmer" },
       ],
     },
     why: [
