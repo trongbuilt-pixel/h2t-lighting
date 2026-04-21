@@ -107,7 +107,7 @@ window.H2T_CONTENT = {
       ],
       team: [
         { photo: "photos/founder.jpg", name: "Trong Bui", role: "Founder & Creative Director", subrole: "Certified MA Lighting Trainer (grandMA3)" },
-        { photo: "photos/account.jpg", name: "Hoang Nguyen", role: "Account" },
+        { photo: "photos/account.jpg", name: "Hoang Nguyen", role: "CEO" },
         { photo: "photos/programmer.jpg", name: "Huong Vu", role: "Lighting Designer/ Programmer" },
         { photo: "photos/previz.jpg", name: "Tinh Vo", role: "Previz Specialist/ Programmer" },
       ],
