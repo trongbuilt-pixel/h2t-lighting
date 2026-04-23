@@ -34,6 +34,7 @@
 }
 html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.7;overflow-x:hidden;}
+body.lightbox-open{overflow:hidden;}
 ::selection{background:var(--g);color:#000;}
 body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");background-size:200px;pointer-events:none;z-index:999;opacity:.6;}
 
@@ -146,14 +147,26 @@ section{position:relative;z-index:1;}
 .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
 .portfolio-card{border:1px solid var(--border);background:var(--bg2);overflow:hidden;transition:border-color .25s,transform .25s,background .25s;border-radius:var(--radius-lg);}
 .portfolio-card:hover{border-color:var(--gborder);transform:translateY(-4px);background:var(--bg3);}
-.portfolio-media{aspect-ratio:4/3;background:linear-gradient(135deg,rgba(62,207,110,.10),rgba(62,207,110,.03) 55%,rgba(255,255,255,.04));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;border-radius:var(--radius-md);}
+.portfolio-media-grid{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;padding:.65rem;}
+.portfolio-media{aspect-ratio:4/5;background:linear-gradient(135deg,rgba(62,207,110,.10),rgba(62,207,110,.03) 55%,rgba(255,255,255,.04));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;border-radius:var(--radius-md);min-height:220px;}
 .portfolio-media::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at top right,rgba(62,207,110,.15),transparent 42%);pointer-events:none;}
 .portfolio-media img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block;background:transparent;}
-.portfolio-placeholder{position:absolute;inset:0;z-index:1;display:block;}
-.portfolio-placeholder-label,.portfolio-placeholder-note{display:none;}
+.portfolio-placeholder{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.45rem;padding:1rem;text-align:center;background:linear-gradient(160deg,rgba(12,20,13,.96),rgba(17,26,18,.92));}
+.portfolio-placeholder[hidden]{display:none;}
+.portfolio-placeholder-label{display:inline-flex;align-items:center;justify-content:center;padding:.3rem .65rem;border-radius:999px;border:1px solid var(--gborder);background:var(--gdim);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--g);}
+.portfolio-placeholder-note{display:block;font-size:12px;line-height:1.6;color:var(--text2);word-break:break-word;max-width:16ch;}
 .portfolio-copy{padding:1.25rem 1.25rem 1.4rem;}
 .portfolio-meta{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text3);margin-bottom:.65rem;}
 .portfolio-title{font-size:1.15rem;font-weight:700;color:var(--text);}
+
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;z-index:1200;display:flex;align-items:center;justify-content:center;padding:2rem;background:rgba(2,7,4,.84);backdrop-filter:blur(12px);opacity:0;pointer-events:none;transition:opacity .2s ease;}
+.lightbox.is-open{opacity:1;pointer-events:auto;}
+.lightbox-dialog{position:relative;max-width:min(1100px,92vw);max-height:88vh;width:max-content;display:flex;align-items:center;justify-content:center;}
+.lightbox-image{display:block;max-width:100%;max-height:88vh;border-radius:var(--radius-lg);border:1px solid var(--border);box-shadow:0 24px 80px rgba(0,0,0,.45);background:var(--bg2);}
+.lightbox-close{position:absolute;top:-.9rem;right:-.9rem;width:42px;height:42px;border-radius:999px;border:1px solid var(--gborder);background:rgba(6,12,7,.9);color:var(--text);display:flex;align-items:center;justify-content:center;cursor:pointer;font:inherit;font-size:1.4rem;line-height:1;transition:background .2s,color .2s,border-color .2s;}
+.lightbox-close:hover{background:var(--gdim);color:var(--g);border-color:var(--g);}
+.portfolio-media img{cursor:zoom-in;}
 
 /* WIDE BANNER */
 .wide-banner-section{padding:5.9rem 0 0;position:relative;z-index:1;}
@@ -285,6 +298,10 @@ footer{border-top:1px solid var(--border);padding:3rem 4rem;display:grid;grid-te
   .svc-media{min-height:220px;height:auto;}
   .svc-head{gap:.8rem;margin-bottom:1rem;}
   .portfolio-grid{grid-template-columns:1fr;}
+  .portfolio-media-grid{grid-template-columns:1fr;}
+  .portfolio-media{aspect-ratio:4/3;min-height:200px;}
+  .lightbox{padding:1rem;}
+  .lightbox-close{top:.75rem;right:.75rem;}
   .tools-inline-list{justify-content:center;gap:1rem;}
   .tool-inline{min-width:84px;}
   .about-box{padding:1.4rem;}
@@ -322,6 +339,10 @@ const getToolLogoScale = toolName => toolName === 'GrandMA3' ? 1.4 : toolName ==
 const renderImageSlot = (image, alt, placeholderClass, placeholderLabelClass, placeholderLabel, placeholderNoteClass, placeholderNote) => image
   ? `<img src="${e(image)}" alt="${e(alt)}" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="${placeholderClass}" hidden><span class="${placeholderLabelClass}">${e(placeholderLabel)}</span><p class="${placeholderNoteClass}">${e(placeholderNote)}</p></div>`
   : `<div class="${placeholderClass}"><span class="${placeholderLabelClass}">${e(placeholderLabel)}</span><p class="${placeholderNoteClass}">${e(placeholderNote)}</p></div>`;
+const getPortfolioImagePairs = item => [
+  { image: item.image, alt: item.imageAlt || item.title, placeholderLabel: 'Image 1', placeholderNote: item.image },
+  { image: item.image2, alt: item.imageAlt2 || item.title, placeholderLabel: 'Image 2', placeholderNote: item.image2 },
+];
 const renderValueIcon = icon => valueIconSVG[icon] || e(icon);
 
 const app = document.getElementById('app');
@@ -346,6 +367,9 @@ function renderLocaleSwitch(locale) {
 function bindInteractions(locale) {
   const navToggle = document.getElementById('nav-toggle');
   const mobileNav = document.getElementById('mobile-nav');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImage = document.getElementById('lightbox-image');
+  const lightboxClose = document.getElementById('lightbox-close');
 
   if (navToggle && mobileNav) {
     const closeMobileNav = () => {
@@ -379,6 +403,33 @@ function bindInteractions(locale) {
       renderPage(nextLocale);
     });
   });
+
+  if (lightbox && lightboxImage && lightboxClose) {
+    const closeLightbox = () => {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImage.removeAttribute('src');
+      lightboxImage.removeAttribute('alt');
+      document.body.classList.remove('lightbox-open');
+    };
+
+    document.querySelectorAll('.portfolio-media img').forEach(image => {
+      image.addEventListener('click', () => {
+        const src = image.getAttribute('src');
+        if (!src) return;
+        lightboxImage.setAttribute('src', src);
+        lightboxImage.setAttribute('alt', image.getAttribute('alt') || 'Portfolio image');
+        lightbox.classList.add('is-open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('lightbox-open');
+      });
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', event => {
+      if (event.target === lightbox) closeLightbox();
+    });
+  }
 }
 
 function renderPage(locale) {
@@ -516,8 +567,11 @@ function renderPage(locale) {
     <div class="portfolio-grid">
       ${C.portfolio.items.map(item => `
         <article class="portfolio-card">
-          <div class="portfolio-media">
-            ${renderImageSlot(item.image, item.imageAlt || item.title, 'portfolio-placeholder', 'portfolio-placeholder-label', '', 'portfolio-placeholder-note', '')}
+          <div class="portfolio-media-grid">
+            ${getPortfolioImagePairs(item).map(imageItem => `
+              <div class="portfolio-media">
+                ${renderImageSlot(imageItem.image, imageItem.alt, 'portfolio-placeholder', 'portfolio-placeholder-label', imageItem.placeholderLabel, 'portfolio-placeholder-note', imageItem.placeholderNote)}
+              </div>`).join('')}
           </div>
           <div class="portfolio-copy">
             <p class="portfolio-meta">${e(item.meta)}</p>
@@ -662,6 +716,13 @@ function renderPage(locale) {
     <a href="#contact">${e(C.nav.cta)}</a>
   </div>
 </footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="lightbox-dialog">
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close image preview">×</button>
+    <img class="lightbox-image" id="lightbox-image" alt="">
+  </div>
+</div>
   `;
 
   bindInteractions(currentLocale);
