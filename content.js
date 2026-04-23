@@ -77,6 +77,7 @@ window.H2T_CONTENT = {
         { title: "Vin8Wonders", meta: "Touring production", image: "portfolio/tour-visuals.jpg", imageAlt: "Vin8Wonders portfolio image", image2: "portfolio/tour-visuals-2.jpg", imageAlt2: "Vin8Wonders portfolio image 2" },
         { title: "Forrestival 2025", meta: "Festival production", image: "portfolio/music-festival.jpg", imageAlt: "Forrestival 2025 portfolio image", image2: "portfolio/music-festival-2.jpg", imageAlt2: "Forrestival 2025 portfolio image 2" },
         { title: "VTVConcert", meta: "Government event", image: "portfolio/government-festival.jpg", imageAlt: "VTVConcert portfolio image", image2: "portfolio/government-festival-2.jpg", imageAlt2: "VTVConcert portfolio image 2" },
+        { title: "Project Installation", meta: "Technical deployment", image: "portfolio/project-installation.jpg", imageAlt: "Project Installation portfolio image", image2: "portfolio/project-installation-2.jpg", imageAlt2: "Project Installation portfolio image 2" },
       ],
     },
     banner: {
@@ -235,6 +236,7 @@ window.H2T_CONTENT = {
         { title: "Vin8Wonders", meta: "Touring production", image: "portfolio/tour-visuals.jpg", imageAlt: "Hình dự án Vin8Wonders", image2: "portfolio/tour-visuals-2.jpg", imageAlt2: "Hình dự án Vin8Wonders góc 2" },
         { title: "Lễ hội âm nhạc Tràng An Ninh Bình", meta: "Festival production", image: "portfolio/music-festival.jpg", imageAlt: "Hình dự án lễ hội âm nhạc", image2: "portfolio/music-festival-2.jpg", imageAlt2: "Hình dự án lễ hội âm nhạc góc 2" },
         { title: "VTVConcert", meta: "Sự kiện nhà nước", image: "portfolio/government-festival.jpg", imageAlt: "Hình dự án VTVConcert", image2: "portfolio/government-festival-2.jpg", imageAlt2: "Hình dự án VTVConcert góc 2" },
+        { title: "Lắp đặt dự án", meta: "Triển khai kỹ thuật", image: "portfolio/project-installation.jpg", imageAlt: "Hình dự án lắp đặt", image2: "portfolio/project-installation-2.jpg", imageAlt2: "Hình dự án lắp đặt góc 2" },
       ],
     },
     banner: {
