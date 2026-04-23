@@ -72,11 +72,11 @@ window.H2T_CONTENT = {
       titleAccent: "Portfolio",
       desc: "A quick overview of shows and visual directions developed by H2T.",
       items: [
-        { title: "Concert Stage", meta: "Live show", image: "portfolio/concert-stage.jpg", imageAlt: "Concert Stage portfolio image" },
-        { title: "Brand Launch", meta: "Corporate event", image: "portfolio/brand-launch.jpg", imageAlt: "Brand Launch portfolio image" },
-        { title: "Vin8Wonders", meta: "Touring production", image: "portfolio/tour-visuals.jpg", imageAlt: "Vin8Wonders portfolio image" },
-        { title: "Forrestival 2025", meta: "Festival production", image: "portfolio/music-festival.jpg", imageAlt: "Forrestival 2025 portfolio image" },
-        { title: "VTVConcert", meta: "Government event", image: "portfolio/government-festival.jpg", imageAlt: "VTVConcert portfolio image" },
+        { title: "Concert Stage", meta: "Live show", image: "portfolio/concert-stage.jpg", imageAlt: "Concert Stage portfolio image", image2: "portfolio/concert-stage-2.jpg", imageAlt2: "Concert Stage portfolio image 2" },
+        { title: "Brand Launch", meta: "Corporate event", image: "portfolio/brand-launch.jpg", imageAlt: "Brand Launch portfolio image", image2: "portfolio/brand-launch-2.jpg", imageAlt2: "Brand Launch portfolio image 2" },
+        { title: "Vin8Wonders", meta: "Touring production", image: "portfolio/tour-visuals.jpg", imageAlt: "Vin8Wonders portfolio image", image2: "portfolio/tour-visuals-2.jpg", imageAlt2: "Vin8Wonders portfolio image 2" },
+        { title: "Forrestival 2025", meta: "Festival production", image: "portfolio/music-festival.jpg", imageAlt: "Forrestival 2025 portfolio image", image2: "portfolio/music-festival-2.jpg", imageAlt2: "Forrestival 2025 portfolio image 2" },
+        { title: "VTVConcert", meta: "Government event", image: "portfolio/government-festival.jpg", imageAlt: "VTVConcert portfolio image", image2: "portfolio/government-festival-2.jpg", imageAlt2: "VTVConcert portfolio image 2" },
       ],
     },
     banner: {
@@ -230,11 +230,11 @@ window.H2T_CONTENT = {
       titleAccent: "Portfolio",
       desc: "Tổng quan nhanh về các show do H2T đảm nhận.",
       items: [
-        { title: "Show Của Đen", meta: "Live show", image: "portfolio/concert-stage.jpg", imageAlt: "Hình dự án sân khấu concert" },
-        { title: "Sự kiện nhãn hàng", meta: "Sự kiện doanh nghiệp", image: "portfolio/brand-launch.jpg", imageAlt: "Hình dự án ra mắt thương hiệu" },
-        { title: "Vin8Wonders", meta: "Touring production", image: "portfolio/tour-visuals.jpg", imageAlt: "Hình dự án Vin8Wonders" },
-        { title: "Lễ hội âm nhạc Tràng An Ninh Bình", meta: "Festival production", image: "portfolio/music-festival.jpg", imageAlt: "Hình dự án " },
-        { title: "VTVConcert", meta: "Sự kiện nhà nước", image: "portfolio/government-festival.jpg", imageAlt: "Hình dự án government festival" },
+        { title: "Show Của Đen", meta: "Live show", image: "portfolio/concert-stage.jpg", imageAlt: "Hình dự án sân khấu concert", image2: "portfolio/concert-stage-2.jpg", imageAlt2: "Hình dự án sân khấu concert góc 2" },
+        { title: "Sự kiện nhãn hàng", meta: "Sự kiện doanh nghiệp", image: "portfolio/brand-launch.jpg", imageAlt: "Hình dự án ra mắt thương hiệu", image2: "portfolio/brand-launch-2.jpg", imageAlt2: "Hình dự án ra mắt thương hiệu góc 2" },
+        { title: "Vin8Wonders", meta: "Touring production", image: "portfolio/tour-visuals.jpg", imageAlt: "Hình dự án Vin8Wonders", image2: "portfolio/tour-visuals-2.jpg", imageAlt2: "Hình dự án Vin8Wonders góc 2" },
+        { title: "Lễ hội âm nhạc Tràng An Ninh Bình", meta: "Festival production", image: "portfolio/music-festival.jpg", imageAlt: "Hình dự án lễ hội âm nhạc", image2: "portfolio/music-festival-2.jpg", imageAlt2: "Hình dự án lễ hội âm nhạc góc 2" },
+        { title: "VTVConcert", meta: "Sự kiện nhà nước", image: "portfolio/government-festival.jpg", imageAlt: "Hình dự án VTVConcert", image2: "portfolio/government-festival-2.jpg", imageAlt2: "Hình dự án VTVConcert góc 2" },
       ],
     },
     banner: {
